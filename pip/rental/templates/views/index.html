@@ -1,0 +1,42 @@
+
+{% extends "views/layout.html" %}
+
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" 
+href="{%  static 'css/main.css'   %}">
+
+
+
+<hr>
+
+<div class="catalog">
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          
+        </ol>
+        <div id="container" class="carousel-inner">
+            <!-- render here each movie -->
+        </div>
+         
+          
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+</div>
+<hr>
+{% endblock %}
+
+{% block bottom %}
+    {% load static %}
+    <script src="{% static 'catalog.js'%}"></script>
+{% endblock %}
